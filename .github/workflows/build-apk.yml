@@ -18,18 +18,11 @@ jobs:
       with:
         python-version: '3.9'
 
-    - name: Install dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y git wget unzip openjdk-11-jdk
-
     - name: Install Buildozer
-      run: |
-        pip install buildozer
+      run: pip install buildozer
 
     - name: Build APK
-      run: |
-        buildozer android debug
+      run: buildozer android debug
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
