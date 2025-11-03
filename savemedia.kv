@@ -1,0 +1,561 @@
+#:import hex_to_rgba colors.hex_to_rgba
+
+<HomeScreen>:
+    name: 'home'
+    
+    ScrollView:
+        do_scroll_x: False
+        do_scroll_y: True
+        
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y: None
+            height: self.minimum_height
+            padding: '10dp'
+            spacing: '10dp'
+            canvas.before:
+                Color:
+                    rgba: hex_to_rgba('#667eea')
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            
+            # Header Section
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint_y: None
+                height: '120dp'
+                padding: '5dp'
+                
+                Label:
+                    text: 'savemedia.online'
+                    font_size: '24sp'
+                    bold: True
+                    color: 1, 1, 1, 1
+                    size_hint_y: None
+                    height: '40dp'
+                
+                Label:
+                    text: 'Download videos from YouTube, Facebook, Instagram, TikTok & 30+ more platforms!'
+                    text_size: self.width, None
+                    halign: 'center'
+                    size_hint_y: None
+                    height: '40dp'
+                    color: 1, 1, 1, 1
+                    font_size: '14sp'
+            
+            # Security Badges
+            GridLayout:
+                cols: 2
+                rows: 2
+                size_hint_y: None
+                height: '80dp'
+                spacing: '5dp'
+                padding: '5dp'
+                
+                # Badge 1
+                BoxLayout:
+                    orientation: 'horizontal'
+                    size_hint_y: None
+                    height: '30dp'
+                    canvas.before:
+                        Color:
+                            rgba: 1, 1, 1, 0.1
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [20,]
+                    
+                    Label:
+                        text: '✓ 100% Safe'
+                        color: 1, 1, 1, 1
+                        font_size: '12sp'
+                
+                # Badge 2
+                BoxLayout:
+                    orientation: 'horizontal'
+                    size_hint_y: None
+                    height: '30dp'
+                    canvas.before:
+                        Color:
+                            rgba: 1, 1, 1, 0.1
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [20,]
+                    
+                    Label:
+                        text: '⚡ Fast Download'
+                        color: 1, 1, 1, 1
+                        font_size: '12sp'
+                
+                # Badge 3
+                BoxLayout:
+                    orientation: 'horizontal'
+                    size_hint_y: None
+                    height: '30dp'
+                    canvas.before:
+                        Color:
+                            rgba: 1, 1, 1, 0.1
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [20,]
+                    
+                    Label:
+                        text: '🔒 No Login Required'
+                        color: 1, 1, 1, 1
+                        font_size: '12sp'
+                
+                # Badge 4
+                BoxLayout:
+                    orientation: 'horizontal'
+                    size_hint_y: None
+                    height: '30dp'
+                    canvas.before:
+                        Color:
+                            rgba: 1, 1, 1, 0.1
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [20,]
+                    
+                    Label:
+                        text: '∞ Unlimited Downloads'
+                        color: 1, 1, 1, 1
+                        font_size: '12sp'
+            
+            # Stats Container
+            BoxLayout:
+                orientation: 'horizontal'
+                size_hint_y: None
+                height: '80dp'
+                spacing: '5dp'
+                padding: '5dp'
+                
+                # Stat 1 - Downloads
+                BoxLayout:
+                    orientation: 'vertical'
+                    canvas.before:
+                        Color:
+                            rgba: 1, 1, 1, 0.1
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [10,]
+                    
+                    Label:
+                        text: '📥'
+                        font_size: '20sp'
+                    
+                    Label:
+                        text: '1M+'
+                        font_size: '16sp'
+                        bold: True
+                        color: 1, 1, 1, 1
+                    
+                    Label:
+                        text: 'Downloads'
+                        font_size: '10sp'
+                        color: 1, 1, 1, 1
+                
+                # Stat 2 - Users
+                BoxLayout:
+                    orientation: 'vertical'
+                    canvas.before:
+                        Color:
+                            rgba: 1, 1, 1, 0.1
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [10,]
+                    
+                    Label:
+                        text: '👥'
+                        font_size: '20sp'
+                    
+                    Label:
+                        text: '50K+'
+                        font_size: '16sp'
+                        bold: True
+                        color: 1, 1, 1, 1
+                    
+                    Label:
+                        text: 'Users'
+                        font_size: '10sp'
+                        color: 1, 1, 1, 1
+                
+                # Stat 3 - Platforms
+                BoxLayout:
+                    orientation: 'vertical'
+                    canvas.before:
+                        Color:
+                            rgba: 1, 1, 1, 0.1
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [10,]
+                    
+                    Label:
+                        text: '🎬'
+                        font_size: '20sp'
+                    
+                    Label:
+                        text: '30+'
+                        font_size: '16sp'
+                        bold: True
+                        color: 1, 1, 1, 1
+                    
+                    Label:
+                        text: 'Platforms'
+                        font_size: '10sp'
+                        color: 1, 1, 1, 1
+            
+            # Download Form Container
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint_y: None
+                height: '200dp'
+                padding: '15dp'
+                spacing: '10dp'
+                canvas.before:
+                    Color:
+                        rgba: hex_to_rgba('#667eea')
+                    RoundedRectangle:
+                        pos: self.pos
+                        size: self.size
+                        radius: [15,]
+                
+                # URL Input Group
+                BoxLayout:
+                    orientation: 'horizontal'
+                    size_hint_y: None
+                    height: '50dp'
+                    spacing: '0dp'
+                    canvas.before:
+                        Color:
+                            rgba: 1, 1, 1, 1
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [8,]
+                    
+                    TextInput:
+                        id: url_input
+                        hint_text: 'Paste video URL here...'
+                        multiline: False
+                        size_hint_x: 0.7
+                        background_color: 0, 0, 0, 0
+                        foreground_color: 0, 0, 0, 1
+                        padding: '10dp'
+                        write_tab: False
+                    
+                    Button:
+                        id: fetch_btn
+                        text: 'FETCH'
+                        size_hint_x: 0.3
+                        background_color: hex_to_rgba('#4CAF50')
+                        background_normal: ''
+                        color: 1, 1, 1, 1
+                        font_size: '14sp'
+                        on_press: root.fetch_video_info()
+                
+                # Processing Container
+                BoxLayout:
+                    id: processing_container
+                    orientation: 'horizontal'
+                    size_hint_y: None
+                    height: '40dp'
+                    opacity: 0
+                    canvas.before:
+                        Color:
+                            rgba: 1, 1, 1, 0.1
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [10,]
+                    
+                    Label:
+                        text: 'Processing your request...'
+                        color: 1, 1, 1, 1
+                        font_size: '14sp'
+                    
+                    Widget:
+                        size_hint_x: None
+                        width: '10dp'
+                    
+                    Label:
+                        text: '⟳'
+                        font_size: '20sp'
+                        color: 1, 1, 1, 1
+                
+                # Error Container
+                Label:
+                    id: error_container
+                    text: ''
+                    size_hint_y: None
+                    height: '40dp'
+                    opacity: 0
+                    color: 1, 1, 1, 1
+                    canvas.before:
+                        Color:
+                            rgba: 0.9, 0.2, 0.2, 0.8
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [10,]
+                
+                Label:
+                    text: 'By using our service you accept our Terms of Service and Privacy Policy.'
+                    text_size: self.width, None
+                    halign: 'center'
+                    size_hint_y: None
+                    height: '30dp'
+                    color: 1, 1, 1, 1
+                    font_size: '12sp'
+
+<ResultScreen>:
+    name: 'result'
+    
+    ScrollView:
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y: None
+            height: self.minimum_height
+            padding: '15dp'
+            spacing: '10dp'
+            canvas.before:
+                Color:
+                    rgba: hex_to_rgba('#667eea')
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            
+            # Result Container
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint_y: None
+                height: '400dp'
+                padding: '15dp'
+                canvas.before:
+                    Color:
+                        rgba: 1, 1, 1, 0.9
+                    RoundedRectangle:
+                        pos: self.pos
+                        size: self.size
+                        radius: [15,]
+                
+                # Video Preview
+                BoxLayout:
+                    orientation: 'horizontal'
+                    size_hint_y: None
+                    height: '120dp'
+                    spacing: '10dp'
+                    
+                    Image:
+                        source: 'https://via.placeholder.com/200x120/667eea/white?text=Thumbnail'
+                        size_hint_x: None
+                        width: '120dp'
+                        allow_stretch: True
+                    
+                    BoxLayout:
+                        orientation: 'vertical'
+                        spacing: '5dp'
+                        
+                        Label:
+                            id: video_title
+                            text: 'Video Title'
+                            text_size: self.width, None
+                            color: 0.2, 0.2, 0.2, 1
+                            font_size: '16sp'
+                            bold: True
+                            size_hint_y: None
+                            height: '40dp'
+                        
+                        Label:
+                            id: video_duration
+                            text: 'Duration: Loading...'
+                            text_size: self.width, None
+                            color: 0.4, 0.4, 0.4, 1
+                            font_size: '12sp'
+                        
+                        Label:
+                            id: video_uploader
+                            text: 'Uploader: Loading...'
+                            text_size: self.width, None
+                            color: 0.4, 0.4, 0.4, 1
+                            font_size: '12sp'
+                        
+                        Label:
+                            id: video_views
+                            text: 'Views: Loading...'
+                            text_size: self.width, None
+                            color: 0.4, 0.4, 0.4, 1
+                            font_size: '12sp'
+                
+                # Formats Section
+                Label:
+                    text: 'Available Formats'
+                    size_hint_y: None
+                    height: '30dp'
+                    color: 0.2, 0.2, 0.2, 1
+                    font_size: '16sp'
+                    bold: True
+                
+                GridLayout:
+                    id: formats_grid
+                    cols: 1
+                    size_hint_y: None
+                    height: self.minimum_height
+                    spacing: '5dp'
+
+<DownloadScreen>:
+    name: 'download'
+    
+    ScrollView:
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y: None
+            height: self.minimum_height
+            padding: '15dp'
+            spacing: '10dp'
+            canvas.before:
+                Color:
+                    rgba: hex_to_rgba('#667eea')
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            
+            # Download Preview Container
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint_y: None
+                height: '400dp'
+                padding: '15dp'
+                canvas.before:
+                    Color:
+                        rgba: 1, 1, 1, 0.9
+                    RoundedRectangle:
+                        pos: self.pos
+                        size: self.size
+                        radius: [15,]
+                
+                Label:
+                    text: 'Download Preview'
+                    size_hint_y: None
+                    height: '30dp'
+                    color: 0.2, 0.2, 0.2, 1
+                    font_size: '18sp'
+                    bold: True
+                    halign: 'center'
+                
+                BoxLayout:
+                    orientation: 'vertical'
+                    size_hint_y: None
+                    height: '280dp'
+                    spacing: '10dp'
+                    
+                    # Thumbnail with processing
+                    RelativeLayout:
+                        size_hint_y: None
+                        height: '150dp'
+                        
+                        Image:
+                            source: 'https://via.placeholder.com/300x150/667eea/white?text=Video+Preview'
+                            size_hint: None, None
+                            size: '200dp', '120dp'
+                            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                            allow_stretch: True
+                        
+                        BoxLayout:
+                            size_hint: None, None
+                            size: '60dp', '60dp'
+                            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                            canvas.before:
+                                Color:
+                                    rgba: 0.9, 0.3, 0.3, 0.8
+                                RoundedRectangle:
+                                    pos: self.pos
+                                    size: self.size
+                                    radius: [30,]
+                            
+                            Label:
+                                text: '↓'
+                                font_size: '24sp'
+                                color: 1, 1, 1, 1
+                    
+                    Label:
+                        id: preview_title
+                        text: 'Video Quality'
+                        size_hint_y: None
+                        height: '30dp'
+                        color: 0.2, 0.2, 0.2, 1
+                        font_size: '16sp'
+                        bold: True
+                        halign: 'center'
+                    
+                    Label:
+                        text: 'Click DOWNLOAD NOW to get this video'
+                        size_hint_y: None
+                        height: '20dp'
+                        color: 0.4, 0.4, 0.4, 1
+                        font_size: '12sp'
+                        halign: 'center'
+                
+                # Processing for download
+                BoxLayout:
+                    id: processing_container
+                    orientation: 'horizontal'
+                    size_hint_y: None
+                    height: '40dp'
+                    opacity: 0
+                    canvas.before:
+                        Color:
+                            rgba: 0.1, 0.1, 0.1, 0.1
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [10,]
+                    
+                    Label:
+                        text: 'Preparing download...'
+                        color: 0.2, 0.2, 0.2, 1
+                        font_size: '14sp'
+                    
+                    Widget:
+                        size_hint_x: None
+                        width: '10dp'
+                    
+                    Label:
+                        text: '⟳'
+                        font_size: '20sp'
+                        color: 0.2, 0.2, 0.2, 1
+                
+                # Red Download Button
+                Button:
+                    id: download_btn
+                    text: 'DOWNLOAD NOW'
+                    size_hint_y: None
+                    height: '50dp'
+                    background_color: hex_to_rgba('#e74c3c')
+                    background_normal: ''
+                    color: 1, 1, 1, 1
+                    font_size: '16sp'
+                    bold: True
+                    on_press: root.start_download()
+                
+                # Success Message
+                Label:
+                    id: success_container
+                    text: ''
+                    size_hint_y: None
+                    height: '40dp'
+                    opacity: 0
+                    color: 1, 1, 1, 1
+                    canvas.before:
+                        Color:
+                            rgba: 0.2, 0.8, 0.2, 0.8
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            radius: [10,]
