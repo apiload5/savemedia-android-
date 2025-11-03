@@ -1,0 +1,36 @@
+{
+  "api": {
+    "base_url": "https://web-production-ac2e5.up.railway.app/api",
+    "endpoints": {
+      "video_info": "/info",
+      "download": "/download"
+    }
+  },
+  
+  "ads": {
+    "admob": {
+      "app_id": "ca-app-pub-3940256099942544~3347511713",
+      "banner_ad_id": "ca-app-pub-3940256099942544/6300978111",
+      "interstitial_ad_id": "ca-app-pub-3940256099942544/1033173712",
+      "rewarded_ad_id": "ca-app-pub-3940256099942544/5224354917"
+    },
+    "monetag": {
+      "popup_script": "https://forfrogadiertor.com/tag.min.js",
+      "zone_id": "10129235"
+    },
+    "ad_redirect_url": "https://otieu.com/4/10119488"
+  },
+  
+  "urls": {
+    "website": "https://savemedia.online",
+    "privacy_policy": "https://savemedia.online/privacy",
+    "terms_of_service": "https://savemedia.online/terms",
+    "contact": "https://savemedia.online/contact"
+  },
+  
+  "app": {
+    "name": "Savemedia Video Downloader",
+    "version": "1.0.0",
+    "download_folder": "Savemedia"
+  }
+}
