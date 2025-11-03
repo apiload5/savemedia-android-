@@ -49,7 +49,7 @@ jobs:
 
       - name: 📜 Upload Coverage Report (Optional)
         # Coverage report ko artifacts mein upload karein ya Codecov jaisi service par bhej dein
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: python-coverage-report-${{ matrix.python-version }}
           path: coverage.xml
