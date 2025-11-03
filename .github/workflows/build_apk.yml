@@ -1,0 +1,13 @@
+name: Python Kivy to APK Build
+
+on:
+push:
+branches: [ "main" ]
+pull\_request:
+branches: [ "main" ]
+workflow\_dispatch:
+
+jobs:
+build\_apk:
+name: Build Android APK
+runs-on: ubuntu-latest
