@@ -1,0 +1,36 @@
+name: CI - Test and Validate
+
+on: [push, pull_request]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Validate Python syntax
+      run: |
+        python -m py_compile main.py
+        python -m py_compile modules/*.py
+
+    - name: Check file structure
+      run: |
+        ls -la
+        [ -f "main.py" ] || exit 1
+        [ -f "savemedia.kv" ] || exit 1
+        [ -f "buildozer.spec" ] || exit 1
+        [ -f "requirements.txt" ] || exit 1
+
+    - name: Test KV syntax
+      run: |
+        python -c "
+        from kivy.lang import Builder
+        try:
+            Builder.load_file('savemedia.kv')
+            print('✅ KV file syntax is valid')
+        except Exception as e:
+            print(f'❌ KV syntax error: {e}')
+            exit(1)
+        "
